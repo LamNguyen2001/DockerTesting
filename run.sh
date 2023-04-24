@@ -26,7 +26,10 @@ sudo yum install docker-ce docker-ce-cli containerd.io docker-buildx-plugin dock
 sudo systemctl start docker
 
 # build image for docker
+echo "build the image file"
 docker build -t myfirstimage:test1 -f DockerFile .
 
 # create container from image on port 9876
+echo "container is running on port 9876"
+echo "connect using http://<ip address>:9876/the_converter.html"
 docker run -it --name mywebserver -p 9876:80 -h firstserver myfirstimage:test1
