@@ -27,8 +27,7 @@ EXPOSE 80
 #ENTRYPOINT ["/usr/sbin/httpd"]
 ENTRYPOINT ["httpd"]
 
-# run in the foreground
-CMD ["-D", "FOREGROUND"]
-
+#run in the foreground
+#CMD ["-D", "FOREGROUND"]
 
 
